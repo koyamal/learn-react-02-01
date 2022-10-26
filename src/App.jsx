@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
       <h1 style={{ color: "red" }}>Hello!!!</h1>
-      <ColorfulMessage />
+      <ColorfulMessage color="blue" message="How are you?" />
       <p style={contentLedyStyle}>I'm fine!</p>
       <button onClick={onClickButton}>Button</button>
     </>
