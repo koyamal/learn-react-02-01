@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+/* eslint react-hooks/exhaustive-deps: off */
+
+import React, { useEffect, useState } from "react";
 
 import ColorfulMessage from "./components/ColorfulMessage";
 
@@ -12,11 +14,15 @@ const App = () => {
   const onClickShowFace = () => {
     setFaceShowFlag(!faceShowFlag);
   };
-  if (num % 3 === 0) {
-    faceShowFlag || setFaceShowFlag(true);
-  } else {
-    faceShowFlag && setFaceShowFlag(false);
-  }
+
+  useEffect(() => {
+    if (num % 3 === 0) {
+      faceShowFlag || setFaceShowFlag(true);
+    } else {
+      faceShowFlag && setFaceShowFlag(false);
+    }
+  }, [num]);
+
   return (
     <>
       <h1 style={{ color: "red" }}>Hello!!!</h1>
