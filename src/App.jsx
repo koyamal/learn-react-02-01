@@ -1,12 +1,10 @@
 import React from "react";
 
+import ColorfulMessage from "./components/ColorfulMessage";
+
 const App = () => {
   const onClickButton = () => {
     console.log("test");
-  };
-  const contentStyle = {
-    color: "blue",
-    fontSize: "18px"
   };
   const contentLedyStyle = {
     color: "pink",
@@ -15,7 +13,7 @@ const App = () => {
   return (
     <>
       <h1 style={{ color: "red" }}>Hello!!!</h1>
-      <p style={contentStyle}>How are you?</p>
+      <ColorfulMessage />
       <p style={contentLedyStyle}>I'm fine!</p>
       <button onClick={onClickButton}>Button</button>
     </>
